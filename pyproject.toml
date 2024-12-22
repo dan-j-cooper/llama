@@ -1,0 +1,21 @@
+[project]
+name = "llama"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "h2>=4.1.0",
+    "httpx-ws>=0.7.0",
+    "httpx>=0.28.1",
+    "llama-cpp-python>=0.3.5",
+    "orjson>=3.10.12",
+    "typer>=0.15.1",
+    "uvloop>=0.21.0",
+    "wat-inspector>=0.4.3",
+]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+useLibraryCodeForTypes = true
