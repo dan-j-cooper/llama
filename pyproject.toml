@@ -13,6 +13,7 @@ dependencies = [
     "typer>=0.15.1",
     "uvloop>=0.21.0",
     "wat-inspector>=0.4.3",
+    "loguru>=0.7.3",
 ]
 
 [tool.pyright]

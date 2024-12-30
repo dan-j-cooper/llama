@@ -29,7 +29,7 @@ name = "click"
 version = "8.1.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "platform_system == 'Windows'" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/b9/2e/0090cbf739cee7d23781ad4b89a9894a41538e4fcf4c31dcdd705b78eb8b/click-8.1.8.tar.gz", hash = "sha256:ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a", size = 226593 }
 wheels = [
@@ -167,6 +167,7 @@ dependencies = [
     { name = "httpx" },
     { name = "httpx-ws" },
     { name = "llama-cpp-python" },
+    { name = "loguru" },
     { name = "orjson" },
     { name = "typer" },
     { name = "uvloop" },
@@ -179,6 +180,7 @@ requires-dist = [
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "httpx-ws", specifier = ">=0.7.0" },
     { name = "llama-cpp-python", specifier = ">=0.3.5" },
+    { name = "loguru", specifier = ">=0.7.3" },
     { name = "orjson", specifier = ">=3.10.12" },
     { name = "typer", specifier = ">=0.15.1" },
     { name = "uvloop", specifier = ">=0.21.0" },
@@ -196,6 +198,19 @@ dependencies = [
     { name = "typing-extensions" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/91/00/9b4c5557b694fb8d3730d006afbb2facc36f27e2c0f136d9cc009f4b1ffa/llama_cpp_python-0.3.5.tar.gz", hash = "sha256:f5ce47499d53d3973e28ca5bdaf2dfe820163fa3fb67e3050f98e2e9b58d2cf6", size = 64461879 }
+
+[[package]]
+name = "loguru"
+version = "0.7.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "win32-setctime", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3a/05/a1dae3dffd1116099471c643b8924f5aa6524411dc6c63fdae648c4f1aca/loguru-0.7.3.tar.gz", hash = "sha256:19480589e77d47b8d85b2c827ad95d49bf31b0dcde16593892eb51dd18706eb6", size = 63559 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0c/29/0348de65b8cc732daa3e33e67806420b2ae89bdce2b04af740289c5c6c8c/loguru-0.7.3-py3-none-any.whl", hash = "sha256:31a33c10c8e1e10422bfd431aeb5d351c7cf7fa671e3c4df004162264b28220c", size = 61595 },
+]
 
 [[package]]
 name = "markdown-it-py"
@@ -415,6 +430,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/71/ed/463950964282fb8e40d363baeba3b2852b3dba3c1acea538e553959fa721/wat_inspector-0.4.3.tar.gz", hash = "sha256:1c47c4943eec631d7d6412f4e6a225fa29c21db30143728d6bbb6f873790ec77", size = 23023 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/0e/d0/05abf7dae933697d882ff7e410afb9b02e32640cc770cad2a63428e14f90/wat_inspector-0.4.3-py3-none-any.whl", hash = "sha256:b739b8779ccd729503caa8912cf1d1c59eba3762707f40ed6dbb92434af3bd1f", size = 15042 },
+]
+
+[[package]]
+name = "win32-setctime"
+version = "1.2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b3/8f/705086c9d734d3b663af0e9bb3d4de6578d08f46b1b101c2442fd9aecaa2/win32_setctime-1.2.0.tar.gz", hash = "sha256:ae1fdf948f5640aae05c511ade119313fb6a30d7eabe25fef9764dca5873c4c0", size = 4867 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e1/07/c6fe3ad3e685340704d314d765b7912993bcb8dc198f0e7a89382d37974b/win32_setctime-1.2.0-py3-none-any.whl", hash = "sha256:95d644c4e708aba81dc3704a116d8cbc974d70b3bdb8be1d150e36be6e9d1390", size = 4083 },
 ]
 
 [[package]]
